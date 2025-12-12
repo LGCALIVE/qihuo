@@ -153,6 +153,36 @@ CREATE TABLE alerts (
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- 8. 行为预警表（浮亏加仓、逆势加仓等）
+CREATE TABLE behavior_alerts (
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+    strategy_id UUID REFERENCES strategies(id) ON DELETE CASCADE,
+    trade_date DATE NOT NULL,
+
+    alert_type VARCHAR(50) NOT NULL,            -- 预警类型: floating_loss_add, counter_trend_add
+    severity VARCHAR(20) NOT NULL,              -- 严重程度: high, medium, low
+    contract VARCHAR(50),                       -- 相关合约
+    description TEXT,                           -- 预警描述
+    details JSONB,                              -- 详细数据
+
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 9. 策略行为摘要表（每日汇总）
+CREATE TABLE behavior_summary (
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+    strategy_id UUID REFERENCES strategies(id) ON DELETE CASCADE,
+    calc_date DATE NOT NULL,                    -- 计算日期
+
+    floating_loss_add_count INT DEFAULT 0,      -- 浮亏加仓次数
+    counter_trend_add_count INT DEFAULT 0,      -- 逆势加仓次数
+    high_severity_count INT DEFAULT 0,          -- 高危预警次数
+    behavior_risk_score DECIMAL(8,2),           -- 行为风险评分 (0-100)
+
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE(strategy_id, calc_date)
+);
+
 -- 创建索引
 CREATE INDEX idx_daily_equity_strategy_date ON daily_equity(strategy_id, trade_date);
 CREATE INDEX idx_positions_strategy_date ON positions(strategy_id, trade_date);
@@ -160,6 +190,8 @@ CREATE INDEX idx_trades_strategy_date ON trades(strategy_id, trade_date);
 CREATE INDEX idx_daily_metrics_strategy_date ON daily_metrics(strategy_id, trade_date);
 CREATE INDEX idx_strategy_scores_date ON strategy_scores(calc_date);
 CREATE INDEX idx_alerts_strategy_date ON alerts(strategy_id, trade_date);
+CREATE INDEX idx_behavior_alerts_strategy_date ON behavior_alerts(strategy_id, trade_date);
+CREATE INDEX idx_behavior_summary_strategy_date ON behavior_summary(strategy_id, calc_date);
 
 -- 启用 Row Level Security (可选)
 -- ALTER TABLE strategies ENABLE ROW LEVEL SECURITY;

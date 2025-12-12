@@ -2133,6 +2133,633 @@
       "turnover": 0
     }
   ],
+  "behavior": [
+    {
+      "strategy_code": "mgq01",
+      "floating_loss_add_count": 33,
+      "counter_trend_add_count": 0,
+      "high_severity_count": 0,
+      "behavior_risk_score": 100,
+      "recent_alerts": [
+        {
+          "strategy_code": "mgq01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "jd2601",
+          "description": "浮亏加仓: jd2601 浮亏580.00元(0.23%)时加仓1手",
+          "details": {
+            "floating_pnl": -580.0,
+            "loss_ratio": 0.0023,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 3150.0,
+            "position_value": 251600.0
+          }
+        },
+        {
+          "strategy_code": "mgq01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "jd2601",
+          "description": "浮亏加仓: jd2601 浮亏580.00元(0.23%)时加仓1手",
+          "details": {
+            "floating_pnl": -580.0,
+            "loss_ratio": 0.0023,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 3150.0,
+            "position_value": 251600.0
+          }
+        },
+        {
+          "strategy_code": "mgq01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "jd2601",
+          "description": "浮亏加仓: jd2601 浮亏580.00元(0.23%)时加仓2手",
+          "details": {
+            "floating_pnl": -580.0,
+            "loss_ratio": 0.0023,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 3158.0,
+            "position_value": 251600.0
+          }
+        },
+        {
+          "strategy_code": "mgq01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "FG605",
+          "description": "浮亏加仓: FG605 浮亏40.00元(0.09%)时加仓1手",
+          "details": {
+            "floating_pnl": -40.0,
+            "loss_ratio": 0.0009,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 1086.0,
+            "position_value": 43400.0
+          }
+        },
+        {
+          "strategy_code": "mgq01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "FG605",
+          "description": "浮亏加仓: FG605 浮亏40.00元(0.09%)时加仓1手",
+          "details": {
+            "floating_pnl": -40.0,
+            "loss_ratio": 0.0009,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 1086.0,
+            "position_value": 43400.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "rkhf01",
+      "floating_loss_add_count": 132,
+      "counter_trend_add_count": 34,
+      "high_severity_count": 0,
+      "behavior_risk_score": 100,
+      "recent_alerts": [
+        {
+          "strategy_code": "rkhf01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2605",
+          "description": "浮亏加仓: m2605 浮亏400.00元(0.15%)时加仓4手",
+          "details": {
+            "floating_pnl": -400.0,
+            "loss_ratio": 0.0015,
+            "add_quantity": 4,
+            "add_direction": "买",
+            "add_price": 2754.0,
+            "position_value": 275000.0
+          }
+        },
+        {
+          "strategy_code": "rkhf01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2605",
+          "description": "浮亏加仓: m2605 浮亏400.00元(0.15%)时加仓6手",
+          "details": {
+            "floating_pnl": -400.0,
+            "loss_ratio": 0.0015,
+            "add_quantity": 6,
+            "add_direction": "买",
+            "add_price": 2754.0,
+            "position_value": 275000.0
+          }
+        },
+        {
+          "strategy_code": "rkhf01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "y2601",
+          "description": "浮亏加仓: y2601 浮亏10800.00元(0.33%)时加仓1手",
+          "details": {
+            "floating_pnl": -10800.0,
+            "loss_ratio": 0.0033,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 8210.0,
+            "position_value": 3284000.0
+          }
+        },
+        {
+          "strategy_code": "rkhf01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "y2601",
+          "description": "浮亏加仓: y2601 浮亏10800.00元(0.33%)时加仓4手",
+          "details": {
+            "floating_pnl": -10800.0,
+            "loss_ratio": 0.0033,
+            "add_quantity": 4,
+            "add_direction": "买",
+            "add_price": 8210.0,
+            "position_value": 3284000.0
+          }
+        },
+        {
+          "strategy_code": "rkhf01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "y2601",
+          "description": "浮亏加仓: y2601 浮亏10800.00元(0.33%)时加仓1手",
+          "details": {
+            "floating_pnl": -10800.0,
+            "loss_ratio": 0.0033,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 8238.0,
+            "position_value": 3284000.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "rqgg01",
+      "floating_loss_add_count": 62,
+      "counter_trend_add_count": 20,
+      "high_severity_count": 0,
+      "behavior_risk_score": 100,
+      "recent_alerts": [
+        {
+          "strategy_code": "rqgg01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "OI605",
+          "description": "浮亏加仓: OI605 浮亏13960.00元(1.53%)时加仓1手",
+          "details": {
+            "floating_pnl": -13960.0,
+            "loss_ratio": 0.0153,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9110.0,
+            "position_value": 914300.0
+          }
+        },
+        {
+          "strategy_code": "rqgg01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "OI605",
+          "description": "浮亏加仓: OI605 浮亏13960.00元(1.53%)时加仓1手",
+          "details": {
+            "floating_pnl": -13960.0,
+            "loss_ratio": 0.0153,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9110.0,
+            "position_value": 914300.0
+          }
+        },
+        {
+          "strategy_code": "rqgg01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "OI605",
+          "description": "浮亏加仓: OI605 浮亏13960.00元(1.53%)时加仓1手",
+          "details": {
+            "floating_pnl": -13960.0,
+            "loss_ratio": 0.0153,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9145.0,
+            "position_value": 914300.0
+          }
+        },
+        {
+          "strategy_code": "rqgg01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "OI605",
+          "description": "浮亏加仓: OI605 浮亏13960.00元(1.53%)时加仓1手",
+          "details": {
+            "floating_pnl": -13960.0,
+            "loss_ratio": 0.0153,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9145.0,
+            "position_value": 914300.0
+          }
+        },
+        {
+          "strategy_code": "rqgg01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2605",
+          "description": "浮亏加仓: m2605 浮亏3600.00元(0.65%)时加仓4手",
+          "details": {
+            "floating_pnl": -3600.0,
+            "loss_ratio": 0.0065,
+            "add_quantity": 4,
+            "add_direction": "买",
+            "add_price": 2758.0,
+            "position_value": 550000.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "rwyw01",
+      "floating_loss_add_count": 38,
+      "counter_trend_add_count": 32,
+      "high_severity_count": 0,
+      "behavior_risk_score": 100,
+      "recent_alerts": [
+        {
+          "strategy_code": "rwyw01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "pp2605",
+          "description": "浮亏加仓: pp2605 浮亏4305.00元(1.06%)时加仓2手",
+          "details": {
+            "floating_pnl": -4305.0,
+            "loss_ratio": 0.0106,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 6281.0,
+            "position_value": 406965.0
+          }
+        },
+        {
+          "strategy_code": "rwyw01",
+          "trade_date": "2025-12-10",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "pp2605",
+          "description": "浮亏加仓: pp2605 浮亏4305.00元(1.06%)时加仓3手",
+          "details": {
+            "floating_pnl": -4305.0,
+            "loss_ratio": 0.0106,
+            "add_quantity": 3,
+            "add_direction": "买",
+            "add_price": 6281.0,
+            "position_value": 406965.0
+          }
+        },
+        {
+          "strategy_code": "rwyw01",
+          "trade_date": "2025-12-10",
+          "alert_type": "counter_trend_add",
+          "severity": "low",
+          "contract": "pp2605",
+          "description": "逆势加仓: pp2605 价格下跌0.93%时买入, 开仓2手",
+          "details": {
+            "direction": "买",
+            "price_change": -59.0,
+            "change_pct": -0.0093,
+            "quantity": 2,
+            "price": 6281.0,
+            "settlement": 6261.0,
+            "prev_settlement": 6320.0
+          }
+        },
+        {
+          "strategy_code": "rwyw01",
+          "trade_date": "2025-12-10",
+          "alert_type": "counter_trend_add",
+          "severity": "low",
+          "contract": "pp2605",
+          "description": "逆势加仓: pp2605 价格下跌0.93%时买入, 开仓3手",
+          "details": {
+            "direction": "买",
+            "price_change": -59.0,
+            "change_pct": -0.0093,
+            "quantity": 3,
+            "price": 6281.0,
+            "settlement": 6261.0,
+            "prev_settlement": 6320.0
+          }
+        },
+        {
+          "strategy_code": "rwyw01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "l2605",
+          "description": "浮亏加仓: l2605 浮亏20135.00元(1.51%)时加仓2手",
+          "details": {
+            "floating_pnl": -20135.0,
+            "loss_ratio": 0.0151,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 6680.0,
+            "position_value": 1330400.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "rxzx01",
+      "floating_loss_add_count": 82,
+      "counter_trend_add_count": 17,
+      "high_severity_count": 0,
+      "behavior_risk_score": 100,
+      "recent_alerts": [
+        {
+          "strategy_code": "rxzx01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "AP601",
+          "description": "浮亏加仓: AP601 浮亏1060.00元(0.28%)时加仓1手",
+          "details": {
+            "floating_pnl": -1060.0,
+            "loss_ratio": 0.0028,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9552.0,
+            "position_value": 381240.0
+          }
+        },
+        {
+          "strategy_code": "rxzx01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "AP601",
+          "description": "浮亏加仓: AP601 浮亏1060.00元(0.28%)时加仓1手",
+          "details": {
+            "floating_pnl": -1060.0,
+            "loss_ratio": 0.0028,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 9552.0,
+            "position_value": 381240.0
+          }
+        },
+        {
+          "strategy_code": "rxzx01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "IC2603",
+          "description": "浮亏加仓: IC2603 浮亏480.00元(0.03%)时加仓1手",
+          "details": {
+            "floating_pnl": -480.0,
+            "loss_ratio": 0.0003,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 6962.2,
+            "position_value": 1383880.0
+          }
+        },
+        {
+          "strategy_code": "rxzx01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "IC2603",
+          "description": "浮亏加仓: IC2603 浮亏480.00元(0.03%)时加仓1手",
+          "details": {
+            "floating_pnl": -480.0,
+            "loss_ratio": 0.0003,
+            "add_quantity": 1,
+            "add_direction": "买",
+            "add_price": 6921.8,
+            "position_value": 1383880.0
+          }
+        },
+        {
+          "strategy_code": "rxzx01",
+          "trade_date": "2025-12-09",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "al2602",
+          "description": "浮亏加仓: al2602 浮亏2875.00元(0.52%)时加仓4手",
+          "details": {
+            "floating_pnl": -2875.0,
+            "loss_ratio": 0.0052,
+            "add_quantity": 4,
+            "add_direction": "买",
+            "add_price": 22150.0,
+            "position_value": 550875.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "yj2107",
+      "floating_loss_add_count": 12,
+      "counter_trend_add_count": 5,
+      "high_severity_count": 0,
+      "behavior_risk_score": 75,
+      "recent_alerts": [
+        {
+          "strategy_code": "yj2107",
+          "trade_date": "2025-12-01",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "bu2603",
+          "description": "浮亏加仓: bu2603 浮亏120.00元(0.07%)时加仓6手",
+          "details": {
+            "floating_pnl": -120.0,
+            "loss_ratio": 0.0007,
+            "add_quantity": 6,
+            "add_direction": "买",
+            "add_price": 3022.0,
+            "position_value": 181200.0
+          }
+        },
+        {
+          "strategy_code": "yj2107",
+          "trade_date": "2025-11-27",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "SF603",
+          "description": "浮亏加仓: SF603 浮亏60.00元(0.04%)时加仓6手",
+          "details": {
+            "floating_pnl": -60.0,
+            "loss_ratio": 0.0004,
+            "add_quantity": 6,
+            "add_direction": "买",
+            "add_price": 5390.0,
+            "position_value": 161640.0
+          }
+        },
+        {
+          "strategy_code": "yj2107",
+          "trade_date": "2025-11-27",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "p2605",
+          "description": "浮亏加仓: p2605 浮亏200.00元(0.12%)时加仓2手",
+          "details": {
+            "floating_pnl": -200.0,
+            "loss_ratio": 0.0012,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 8544.0,
+            "position_value": 170680.0
+          }
+        },
+        {
+          "strategy_code": "yj2107",
+          "trade_date": "2025-11-25",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "jd2605",
+          "description": "浮亏加仓: jd2605 浮亏4300.00元(0.41%)时加仓12手",
+          "details": {
+            "floating_pnl": -4300.0,
+            "loss_ratio": 0.0041,
+            "add_quantity": 12,
+            "add_direction": "卖",
+            "add_price": 3520.0,
+            "position_value": 1057800.0
+          }
+        },
+        {
+          "strategy_code": "yj2107",
+          "trade_date": "2025-11-25",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "jd2605",
+          "description": "浮亏加仓: jd2605 浮亏4300.00元(0.41%)时加仓1手",
+          "details": {
+            "floating_pnl": -4300.0,
+            "loss_ratio": 0.0041,
+            "add_quantity": 1,
+            "add_direction": "卖",
+            "add_price": 3520.0,
+            "position_value": 1057800.0
+          }
+        }
+      ]
+    },
+    {
+      "strategy_code": "rdgy01",
+      "floating_loss_add_count": 13,
+      "counter_trend_add_count": 0,
+      "high_severity_count": 0,
+      "behavior_risk_score": 65,
+      "recent_alerts": [
+        {
+          "strategy_code": "rdgy01",
+          "trade_date": "2025-12-04",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2603",
+          "description": "浮亏加仓: m2603 浮亏2400.00元(0.13%)时加仓3手",
+          "details": {
+            "floating_pnl": -2400.0,
+            "loss_ratio": 0.0013,
+            "add_quantity": 3,
+            "add_direction": "买",
+            "add_price": 3019.0,
+            "position_value": 1809600.0
+          }
+        },
+        {
+          "strategy_code": "rdgy01",
+          "trade_date": "2025-12-04",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2603",
+          "description": "浮亏加仓: m2603 浮亏2400.00元(0.13%)时加仓2手",
+          "details": {
+            "floating_pnl": -2400.0,
+            "loss_ratio": 0.0013,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 3019.0,
+            "position_value": 1809600.0
+          }
+        },
+        {
+          "strategy_code": "rdgy01",
+          "trade_date": "2025-12-04",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2603",
+          "description": "浮亏加仓: m2603 浮亏2400.00元(0.13%)时加仓2手",
+          "details": {
+            "floating_pnl": -2400.0,
+            "loss_ratio": 0.0013,
+            "add_quantity": 2,
+            "add_direction": "买",
+            "add_price": 3019.0,
+            "position_value": 1809600.0
+          }
+        },
+        {
+          "strategy_code": "rdgy01",
+          "trade_date": "2025-12-04",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2603",
+          "description": "浮亏加仓: m2603 浮亏2400.00元(0.13%)时加仓5手",
+          "details": {
+            "floating_pnl": -2400.0,
+            "loss_ratio": 0.0013,
+            "add_quantity": 5,
+            "add_direction": "买",
+            "add_price": 3019.0,
+            "position_value": 1809600.0
+          }
+        },
+        {
+          "strategy_code": "rdgy01",
+          "trade_date": "2025-12-04",
+          "alert_type": "floating_loss_add",
+          "severity": "low",
+          "contract": "m2603",
+          "description": "浮亏加仓: m2603 浮亏2400.00元(0.13%)时加仓4手",
+          "details": {
+            "floating_pnl": -2400.0,
+            "loss_ratio": 0.0013,
+            "add_quantity": 4,
+            "add_direction": "买",
+            "add_price": 3019.0,
+            "position_value": 1809600.0
+          }
+        }
+      ]
+    }
+  ],
   "meta": {
     "latest_date": "2025-12-10",
     "strategy_count": 8,

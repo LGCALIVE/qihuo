@@ -28,6 +28,14 @@ spec2 = importlib.util.spec_from_file_location(
 metrics_module = importlib.util.module_from_spec(spec2)
 spec2.loader.exec_module(metrics_module)
 
+# 导入 behavior_detector
+spec3 = importlib.util.spec_from_file_location(
+    "behavior_detector",
+    os.path.join(src_dir, "detector", "behavior_detector.py")
+)
+behavior_module = importlib.util.module_from_spec(spec3)
+spec3.loader.exec_module(behavior_module)
+
 try:
     from supabase import create_client, Client
 except ImportError:
@@ -281,6 +289,77 @@ class SupabaseUploader:
             print(f"上传策略评分失败: {e}")
             return 0
 
+    def upload_behavior_alerts(self, positions_list: List, trades_list: List,
+                                equity_list: List) -> tuple:
+        """上传行为检测数据"""
+        import json
+
+        position_dicts = [excel_parser.position_to_dict(p) for p in positions_list]
+        trade_dicts = [excel_parser.trade_to_dict(t) for t in trades_list]
+        equity_dicts = [excel_parser.equity_to_dict(e) for e in equity_list]
+
+        detector = behavior_module.BehaviorDetector()
+        alerts_by_strategy = detector.detect_all(position_dicts, trade_dicts, equity_dicts)
+        summary = detector.get_behavior_summary(position_dicts, trade_dicts, equity_dicts)
+
+        # 上传行为预警
+        alert_records = []
+        for strategy_code, alerts in alerts_by_strategy.items():
+            strategy_id = self.strategy_id_map.get(strategy_code)
+            if not strategy_id:
+                continue
+
+            for alert in alerts:
+                alert_records.append({
+                    'strategy_id': strategy_id,
+                    'trade_date': alert.trade_date,
+                    'alert_type': alert.alert_type,
+                    'severity': alert.severity,
+                    'contract': alert.contract,
+                    'description': alert.description,
+                    'details': json.dumps(alert.details),
+                })
+
+        # 分批上传
+        batch_size = 100
+        alerts_uploaded = 0
+        for i in range(0, len(alert_records), batch_size):
+            batch = alert_records[i:i + batch_size]
+            try:
+                self.client.table('behavior_alerts').insert(batch).execute()
+                alerts_uploaded += len(batch)
+            except Exception as e:
+                print(f"上传行为预警失败: {e}")
+
+        # 上传行为摘要
+        summary_records = []
+        calc_date = max(e['trade_date'] for e in equity_dicts)
+        for strategy_code, data in summary.items():
+            strategy_id = self.strategy_id_map.get(strategy_code)
+            if not strategy_id:
+                continue
+
+            summary_records.append({
+                'strategy_id': strategy_id,
+                'calc_date': calc_date,
+                'floating_loss_add_count': data['floating_loss_add_count'],
+                'counter_trend_add_count': data['counter_trend_add_count'],
+                'high_severity_count': data['high_severity_count'],
+                'behavior_risk_score': data['behavior_risk_score'],
+            })
+
+        summary_uploaded = 0
+        try:
+            self.client.table('behavior_summary').upsert(
+                summary_records,
+                on_conflict='strategy_id,calc_date'
+            ).execute()
+            summary_uploaded = len(summary_records)
+        except Exception as e:
+            print(f"上传行为摘要失败: {e}")
+
+        return alerts_uploaded, summary_uploaded
+
 
 def main():
     """主函数"""
@@ -333,6 +412,12 @@ def main():
     print("\n上传策略评分...")
     n = uploader.upload_strategy_scores(equity_df)
     print(f"  上传 {n} 条记录")
+
+    print("\n上传行为检测数据...")
+    alerts_n, summary_n = uploader.upload_behavior_alerts(
+        positions_list, trades_list, equity_list
+    )
+    print(f"  上传 {alerts_n} 条预警, {summary_n} 条摘要")
 
     print("\n数据上传完成!")
 

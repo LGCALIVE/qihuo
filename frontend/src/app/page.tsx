@@ -5,6 +5,7 @@ import StrategyRankingTable from '@/components/StrategyRankingTable'
 import EquityChart from '@/components/EquityChart'
 import MetricCard from '@/components/MetricCard'
 import RiskMonitor from '@/components/RiskMonitor'
+import BehaviorAnalysis from '@/components/BehaviorAnalysis'
 import { supabase } from '@/lib/supabase'
 import type { StrategyScoreWithInfo, DailyEquityWithInfo } from '@/types/database'
 
@@ -19,10 +20,28 @@ interface RiskMetric {
   turnover?: number | null
 }
 
+interface BehaviorSummary {
+  strategy_code: string
+  floating_loss_add_count: number
+  counter_trend_add_count: number
+  high_severity_count: number
+  behavior_risk_score: number
+  recent_alerts: Array<{
+    strategy_code: string
+    trade_date: string
+    alert_type: string
+    severity: string
+    contract: string
+    description: string
+    details: Record<string, unknown>
+  }>
+}
+
 interface DataFile {
   scores: StrategyScoreWithInfo[]
   equity: DailyEquityWithInfo[]
   risk: RiskMetric[]
+  behavior?: BehaviorSummary[]
   meta: {
     latest_date: string
     strategy_count: number
@@ -36,6 +55,7 @@ export default function Dashboard() {
   const [scores, setScores] = useState<StrategyScoreWithInfo[]>([])
   const [equity, setEquity] = useState<DailyEquityWithInfo[]>([])
   const [riskData, setRiskData] = useState<RiskMetric[]>([])
+  const [behaviorData, setBehaviorData] = useState<BehaviorSummary[]>([])
   const [meta, setMeta] = useState<DataFile['meta'] | null>(null)
   const [selectedStrategy, setSelectedStrategy] = useState<string>('')
   const [loading, setLoading] = useState(true)
@@ -132,6 +152,7 @@ export default function Dashboard() {
         setScores(data.scores)
         setEquity(data.equity)
         setRiskData(data.risk)
+        setBehaviorData(data.behavior || [])
         setMeta(data.meta)
         setDataSource('static')
         return true
@@ -165,6 +186,11 @@ export default function Dashboard() {
     : 0
   const highRiskCount = riskData.filter(r =>
     (r.margin_ratio || 0) > 0.5 || (r.top1_concentration || 0) > 0.8
+  ).length
+
+  // 高行为风险策略数量
+  const highBehaviorRiskCount = behaviorData.filter(b =>
+    b.behavior_risk_score >= 80
   ).length
 
   return (
@@ -235,9 +261,9 @@ export default function Dashboard() {
               />
               <MetricCard
                 title="风险预警"
-                value={highRiskCount}
-                subtitle={highRiskCount > 0 ? '需关注' : '全部正常'}
-                color={highRiskCount > 0 ? 'warning' : 'success'}
+                value={highRiskCount + highBehaviorRiskCount}
+                subtitle={`持仓${highRiskCount} 行为${highBehaviorRiskCount}`}
+                color={(highRiskCount + highBehaviorRiskCount) > 0 ? 'warning' : 'success'}
               />
             </div>
 
@@ -261,6 +287,17 @@ export default function Dashboard() {
 
             {/* 风险监控 */}
             <RiskMonitor data={riskData} />
+
+            {/* 行为分析 */}
+            {behaviorData.length > 0 && (
+              <BehaviorAnalysis
+                data={behaviorData}
+                onSelectStrategy={(code) => {
+                  const strategy = scores.find(s => s.strategies?.strategy_code === code)
+                  if (strategy) setSelectedStrategy(strategy.strategy_id || '')
+                }}
+              />
+            )}
 
             {/* 数据统计 */}
             {meta && (

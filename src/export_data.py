@@ -25,6 +25,13 @@ spec2 = importlib.util.spec_from_file_location(
 metrics_module = importlib.util.module_from_spec(spec2)
 spec2.loader.exec_module(metrics_module)
 
+spec3 = importlib.util.spec_from_file_location(
+    "behavior_detector",
+    os.path.join(src_dir, "detector", "behavior_detector.py")
+)
+behavior_module = importlib.util.module_from_spec(spec3)
+spec3.loader.exec_module(behavior_module)
+
 import pandas as pd
 
 
@@ -124,11 +131,31 @@ def main():
                     'turnover': dm['turnover']
                 })
 
+    # 4. 行为检测数据
+    print("\n执行行为检测...")
+    detector = behavior_module.BehaviorDetector()
+    behavior_summary = detector.get_behavior_summary(position_dicts, trade_dicts, equity_dicts)
+
+    behavior_data = []
+    for strategy_code, data in behavior_summary.items():
+        behavior_data.append({
+            'strategy_code': strategy_code,
+            'floating_loss_add_count': data['floating_loss_add_count'],
+            'counter_trend_add_count': data['counter_trend_add_count'],
+            'high_severity_count': data['high_severity_count'],
+            'behavior_risk_score': data['behavior_risk_score'],
+            'recent_alerts': data['recent_alerts']
+        })
+
+    # 按行为风险评分排序
+    behavior_data.sort(key=lambda x: x['behavior_risk_score'], reverse=True)
+
     # 导出为 JSON
     output = {
         'scores': scores,
         'equity': equity_data,
         'risk': risk_data,
+        'behavior': behavior_data,
         'meta': {
             'latest_date': latest_date,
             'strategy_count': len(scores),
@@ -149,6 +176,7 @@ def main():
     print(f"  - 策略评分: {len(scores)} 条")
     print(f"  - 权益数据: {len(equity_data)} 条")
     print(f"  - 风险数据: {len(risk_data)} 条")
+    print(f"  - 行为分析: {len(behavior_data)} 条")
 
     # 打印策略排名
     print("\n=== 策略排名（真实数据）===")
