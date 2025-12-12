@@ -10,7 +10,11 @@
       "Bash(curl:*)",
       "Bash(export:*)",
       "Bash(export SUPABASE_KEY:*)",
-      "Bash(pip3 install:*)"
+      "Bash(pip3 install:*)",
+      "Bash(vercel --prod:*)",
+      "Bash(vercel env add:*)",
+      "Bash(vercel ls:*)",
+      "Bash(vercel inspect:*)"
     ]
   }
 }
