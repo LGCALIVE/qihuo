@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(export:*)",
+      "Bash(export SUPABASE_KEY:*)",
+      "Bash(pip3 install:*)"
+    ]
+  }
+}

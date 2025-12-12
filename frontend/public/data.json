@@ -1,0 +1,2143 @@
+{
+  "scores": [
+    {
+      "strategy_code": "rqgg01",
+      "calc_date": "2025-12-10",
+      "total_return": 0.004186,
+      "annualized_return": 0.058603,
+      "sharpe_ratio": 6.6814,
+      "max_drawdown": 0.000337,
+      "calmar_ratio": 173.8303,
+      "win_rate": 0.7647,
+      "volatility": 0.004281,
+      "avg_margin_ratio": 0.0249,
+      "performance_score": 68.45,
+      "risk_score": 97.7,
+      "total_score": 83.08,
+      "rank": 1,
+      "id": "1",
+      "strategy_id": "1",
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "strategy_code": "rkhf01",
+      "calc_date": "2025-12-10",
+      "total_return": 0.004612,
+      "annualized_return": 0.064564,
+      "sharpe_ratio": 3.777,
+      "max_drawdown": 0.000952,
+      "calmar_ratio": 67.8105,
+      "win_rate": 0.7647,
+      "volatility": 0.009151,
+      "avg_margin_ratio": 0.0246,
+      "performance_score": 68.47,
+      "risk_score": 97.34,
+      "total_score": 82.91,
+      "rank": 2,
+      "id": "2",
+      "strategy_id": "2",
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "strategy_code": "mgq01",
+      "calc_date": "2025-12-10",
+      "total_return": -0.000303,
+      "annualized_return": -0.004239,
+      "sharpe_ratio": -11.5261,
+      "max_drawdown": 0.000581,
+      "calmar_ratio": -7.2921,
+      "win_rate": 0.5294,
+      "volatility": 0.002971,
+      "avg_margin_ratio": 0.0027,
+      "performance_score": 35.18,
+      "risk_score": 99.52,
+      "total_score": 67.35,
+      "rank": 3,
+      "id": "3",
+      "strategy_id": "3",
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "strategy_code": "rxzx01",
+      "calc_date": "2025-12-10",
+      "total_return": 0.001346,
+      "annualized_return": 0.018844,
+      "sharpe_ratio": -0.6704,
+      "max_drawdown": 0.003723,
+      "calmar_ratio": 5.0611,
+      "win_rate": 0.5882,
+      "volatility": 0.016641,
+      "avg_margin_ratio": 0.0243,
+      "performance_score": 35.78,
+      "risk_score": 96.5,
+      "total_score": 66.14,
+      "rank": 4,
+      "id": "4",
+      "strategy_id": "4",
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "strategy_code": "rdgy01",
+      "calc_date": "2025-12-10",
+      "total_return": 0.00099,
+      "annualized_return": 0.013858,
+      "sharpe_ratio": -1.0654,
+      "max_drawdown": 0.002401,
+      "calmar_ratio": 5.7714,
+      "win_rate": 0.4375,
+      "volatility": 0.015151,
+      "avg_margin_ratio": 0.0141,
+      "performance_score": 34.33,
+      "risk_score": 97.6,
+      "total_score": 65.97,
+      "rank": 5,
+      "id": "5",
+      "strategy_id": "5",
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "strategy_code": "yj2135",
+      "calc_date": "2025-12-10",
+      "total_return": -0.000958,
+      "annualized_return": -0.013406,
+      "sharpe_ratio": -3.3394,
+      "max_drawdown": 0.002154,
+      "calmar_ratio": -6.2222,
+      "win_rate": 0.3529,
+      "volatility": 0.012998,
+      "avg_margin_ratio": 0.0104,
+      "performance_score": 33.12,
+      "risk_score": 98.07,
+      "total_score": 65.59,
+      "rank": 6,
+      "id": "6",
+      "strategy_id": "6",
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "strategy_code": "rwyw01",
+      "calc_date": "2025-12-10",
+      "total_return": -0.004005,
+      "annualized_return": -0.056069,
+      "sharpe_ratio": -6.9349,
+      "max_drawdown": 0.004946,
+      "calmar_ratio": -11.3364,
+      "win_rate": 0.4118,
+      "volatility": 0.012411,
+      "avg_margin_ratio": 0.0147,
+      "performance_score": 32.82,
+      "risk_score": 97.34,
+      "total_score": 65.08,
+      "rank": 7,
+      "id": "7",
+      "strategy_id": "7",
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "strategy_code": "yj2107",
+      "calc_date": "2025-12-10",
+      "total_return": -0.00539,
+      "annualized_return": -0.075464,
+      "sharpe_ratio": -4.6883,
+      "max_drawdown": 0.008157,
+      "calmar_ratio": -9.251,
+      "win_rate": 0.4118,
+      "volatility": 0.022495,
+      "avg_margin_ratio": 0.0566,
+      "performance_score": 32.22,
+      "risk_score": 92.9,
+      "total_score": 62.56,
+      "rank": 8,
+      "id": "8",
+      "strategy_id": "8",
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    }
+  ],
+  "equity": [
+    {
+      "id": "eq-0",
+      "strategy_id": "3",
+      "trade_date": "2025-11-17",
+      "equity": 10088719.84,
+      "cumulative_return": 0.0,
+      "margin_used": 0.0,
+      "floating_pnl": 0.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-1",
+      "strategy_id": "3",
+      "trade_date": "2025-11-18",
+      "equity": 10089858.9,
+      "cumulative_return": 0.0113,
+      "margin_used": 32713.9,
+      "floating_pnl": -2230.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-2",
+      "strategy_id": "3",
+      "trade_date": "2025-11-19",
+      "equity": 10091505.57,
+      "cumulative_return": 0.0276,
+      "margin_used": 18756.0,
+      "floating_pnl": -160.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-3",
+      "strategy_id": "3",
+      "trade_date": "2025-11-20",
+      "equity": 10085700.67,
+      "cumulative_return": -0.0299,
+      "margin_used": 0.0,
+      "floating_pnl": 0.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-4",
+      "strategy_id": "3",
+      "trade_date": "2025-11-21",
+      "equity": 10085639.82,
+      "cumulative_return": -0.0305,
+      "margin_used": 0.0,
+      "floating_pnl": 0.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-5",
+      "strategy_id": "3",
+      "trade_date": "2025-11-24",
+      "equity": 10085963.51,
+      "cumulative_return": -0.0273,
+      "margin_used": 0.0,
+      "floating_pnl": 0.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-6",
+      "strategy_id": "3",
+      "trade_date": "2025-11-25",
+      "equity": 10087264.2,
+      "cumulative_return": -0.0144,
+      "margin_used": 17857.2,
+      "floating_pnl": -680.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-7",
+      "strategy_id": "3",
+      "trade_date": "2025-11-26",
+      "equity": 10085986.09,
+      "cumulative_return": -0.0271,
+      "margin_used": 13269.0,
+      "floating_pnl": -380.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-8",
+      "strategy_id": "3",
+      "trade_date": "2025-11-27",
+      "equity": 10086997.75,
+      "cumulative_return": -0.0171,
+      "margin_used": 13468.0,
+      "floating_pnl": -200.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-9",
+      "strategy_id": "3",
+      "trade_date": "2025-11-28",
+      "equity": 10087520.77,
+      "cumulative_return": -0.0119,
+      "margin_used": 0.0,
+      "floating_pnl": 0.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-10",
+      "strategy_id": "3",
+      "trade_date": "2025-12-01",
+      "equity": 10087033.91,
+      "cumulative_return": -0.0167,
+      "margin_used": 7350.0,
+      "floating_pnl": -480.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-11",
+      "strategy_id": "3",
+      "trade_date": "2025-12-02",
+      "equity": 10088949.75,
+      "cumulative_return": 0.0023,
+      "margin_used": 19016.0,
+      "floating_pnl": 400.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-12",
+      "strategy_id": "3",
+      "trade_date": "2025-12-03",
+      "equity": 10087573.92,
+      "cumulative_return": -0.0114,
+      "margin_used": 43000.4,
+      "floating_pnl": -940.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-13",
+      "strategy_id": "3",
+      "trade_date": "2025-12-04",
+      "equity": 10086413.92,
+      "cumulative_return": -0.0229,
+      "margin_used": 42896.8,
+      "floating_pnl": -2100.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-14",
+      "strategy_id": "3",
+      "trade_date": "2025-12-05",
+      "equity": 10087663.5,
+      "cumulative_return": -0.0105,
+      "margin_used": 37388.2,
+      "floating_pnl": -700.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-15",
+      "strategy_id": "3",
+      "trade_date": "2025-12-08",
+      "equity": 10089291.98,
+      "cumulative_return": 0.0057,
+      "margin_used": 86015.6,
+      "floating_pnl": 1060.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-16",
+      "strategy_id": "3",
+      "trade_date": "2025-12-09",
+      "equity": 10088090.1,
+      "cumulative_return": -0.0062,
+      "margin_used": 76645.2,
+      "floating_pnl": 1480.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-17",
+      "strategy_id": "3",
+      "trade_date": "2025-12-10",
+      "equity": 10085665.43,
+      "cumulative_return": -0.0303,
+      "margin_used": 85281.2,
+      "floating_pnl": -920.0,
+      "strategies": {
+        "strategy_code": "mgq01",
+        "strategy_name": "mgq01"
+      }
+    },
+    {
+      "id": "eq-18",
+      "strategy_id": "5",
+      "trade_date": "2025-11-17",
+      "equity": 20490186.2,
+      "cumulative_return": 0.0,
+      "margin_used": 256284.0,
+      "floating_pnl": -18000.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-19",
+      "strategy_id": "5",
+      "trade_date": "2025-11-18",
+      "equity": 20475786.2,
+      "cumulative_return": -0.0703,
+      "margin_used": 256788.0,
+      "floating_pnl": -32400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-20",
+      "strategy_id": "5",
+      "trade_date": "2025-11-19",
+      "equity": 20452986.2,
+      "cumulative_return": -0.1816,
+      "margin_used": 254604.0,
+      "floating_pnl": -55200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-21",
+      "strategy_id": "5",
+      "trade_date": "2025-11-20",
+      "equity": 20452986.2,
+      "cumulative_return": -0.1816,
+      "margin_used": 253092.0,
+      "floating_pnl": -55200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-22",
+      "strategy_id": "5",
+      "trade_date": "2025-11-21",
+      "equity": 20456586.2,
+      "cumulative_return": -0.164,
+      "margin_used": 253428.0,
+      "floating_pnl": -51600.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-23",
+      "strategy_id": "5",
+      "trade_date": "2025-11-24",
+      "equity": 20445786.2,
+      "cumulative_return": -0.2167,
+      "margin_used": 252420.0,
+      "floating_pnl": -62400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-24",
+      "strategy_id": "5",
+      "trade_date": "2025-11-25",
+      "equity": 20443386.2,
+      "cumulative_return": -0.2284,
+      "margin_used": 252756.0,
+      "floating_pnl": -64800.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-25",
+      "strategy_id": "5",
+      "trade_date": "2025-11-26",
+      "equity": 20440986.2,
+      "cumulative_return": -0.2401,
+      "margin_used": 253764.0,
+      "floating_pnl": -67200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-26",
+      "strategy_id": "5",
+      "trade_date": "2025-11-27",
+      "equity": 20452986.2,
+      "cumulative_return": -0.1816,
+      "margin_used": 255276.0,
+      "floating_pnl": -55200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-27",
+      "strategy_id": "5",
+      "trade_date": "2025-11-28",
+      "equity": 20457786.2,
+      "cumulative_return": -0.1581,
+      "margin_used": 256200.0,
+      "floating_pnl": -50400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-28",
+      "strategy_id": "5",
+      "trade_date": "2025-12-01",
+      "equity": 20455386.2,
+      "cumulative_return": -0.1698,
+      "margin_used": 255696.0,
+      "floating_pnl": -52800.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-29",
+      "strategy_id": "5",
+      "trade_date": "2025-12-02",
+      "equity": 20446986.2,
+      "cumulative_return": -0.2108,
+      "margin_used": 255192.0,
+      "floating_pnl": -61200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-30",
+      "strategy_id": "5",
+      "trade_date": "2025-12-03",
+      "equity": 20445786.2,
+      "cumulative_return": -0.2167,
+      "margin_used": 255276.0,
+      "floating_pnl": -62400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-31",
+      "strategy_id": "5",
+      "trade_date": "2025-12-04",
+      "equity": 20450468.42,
+      "cumulative_return": -0.1938,
+      "margin_used": 381528.0,
+      "floating_pnl": -57600.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-32",
+      "strategy_id": "5",
+      "trade_date": "2025-12-05",
+      "equity": 20451668.42,
+      "cumulative_return": -0.188,
+      "margin_used": 381360.0,
+      "floating_pnl": -56400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-33",
+      "strategy_id": "5",
+      "trade_date": "2025-12-08",
+      "equity": 20488268.42,
+      "cumulative_return": -0.0094,
+      "margin_used": 380982.0,
+      "floating_pnl": -19800.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-34",
+      "strategy_id": "5",
+      "trade_date": "2025-12-09",
+      "equity": 20455868.42,
+      "cumulative_return": -0.1675,
+      "margin_used": 376866.0,
+      "floating_pnl": -52200.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-35",
+      "strategy_id": "5",
+      "trade_date": "2025-12-10",
+      "equity": 20510468.42,
+      "cumulative_return": 0.099,
+      "margin_used": 378924.0,
+      "floating_pnl": 2400.0,
+      "strategies": {
+        "strategy_code": "rdgy01",
+        "strategy_name": "rdgy01"
+      }
+    },
+    {
+      "id": "eq-36",
+      "strategy_id": "2",
+      "trade_date": "2025-11-17",
+      "equity": 10105490.7,
+      "cumulative_return": 0.0,
+      "margin_used": 459454.3,
+      "floating_pnl": 6650.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-37",
+      "strategy_id": "2",
+      "trade_date": "2025-11-18",
+      "equity": 10101033.19,
+      "cumulative_return": -0.0441,
+      "margin_used": 383008.1,
+      "floating_pnl": 11130.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-38",
+      "strategy_id": "2",
+      "trade_date": "2025-11-19",
+      "equity": 10103838.36,
+      "cumulative_return": -0.0164,
+      "margin_used": 512423.5,
+      "floating_pnl": 5050.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-39",
+      "strategy_id": "2",
+      "trade_date": "2025-11-20",
+      "equity": 10114922.98,
+      "cumulative_return": 0.0933,
+      "margin_used": 237122.0,
+      "floating_pnl": -15090.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-40",
+      "strategy_id": "2",
+      "trade_date": "2025-11-21",
+      "equity": 10109704.54,
+      "cumulative_return": 0.0417,
+      "margin_used": 313648.5,
+      "floating_pnl": -9980.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-41",
+      "strategy_id": "2",
+      "trade_date": "2025-11-24",
+      "equity": 10114982.23,
+      "cumulative_return": 0.0939,
+      "margin_used": 267328.0,
+      "floating_pnl": -5130.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-42",
+      "strategy_id": "2",
+      "trade_date": "2025-11-25",
+      "equity": 10118346.0,
+      "cumulative_return": 0.1272,
+      "margin_used": 311390.0,
+      "floating_pnl": -1730.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-43",
+      "strategy_id": "2",
+      "trade_date": "2025-11-26",
+      "equity": 10119155.66,
+      "cumulative_return": 0.1352,
+      "margin_used": 208729.0,
+      "floating_pnl": -5030.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-44",
+      "strategy_id": "2",
+      "trade_date": "2025-11-27",
+      "equity": 10128539.43,
+      "cumulative_return": 0.2281,
+      "margin_used": 131147.0,
+      "floating_pnl": 4790.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-45",
+      "strategy_id": "2",
+      "trade_date": "2025-11-28",
+      "equity": 10130155.08,
+      "cumulative_return": 0.2441,
+      "margin_used": 181614.5,
+      "floating_pnl": 6490.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-46",
+      "strategy_id": "2",
+      "trade_date": "2025-12-01",
+      "equity": 10135883.55,
+      "cumulative_return": 0.3008,
+      "margin_used": 175571.2,
+      "floating_pnl": 4910.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-47",
+      "strategy_id": "2",
+      "trade_date": "2025-12-02",
+      "equity": 10139604.59,
+      "cumulative_return": 0.3376,
+      "margin_used": 210432.6,
+      "floating_pnl": 8660.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-48",
+      "strategy_id": "2",
+      "trade_date": "2025-12-03",
+      "equity": 10139521.46,
+      "cumulative_return": 0.3368,
+      "margin_used": 63819.0,
+      "floating_pnl": -2700.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-49",
+      "strategy_id": "2",
+      "trade_date": "2025-12-04",
+      "equity": 10141302.16,
+      "cumulative_return": 0.3544,
+      "margin_used": 132097.0,
+      "floating_pnl": -850.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-50",
+      "strategy_id": "2",
+      "trade_date": "2025-12-05",
+      "equity": 10142532.88,
+      "cumulative_return": 0.3666,
+      "margin_used": 200588.5,
+      "floating_pnl": 450.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-51",
+      "strategy_id": "2",
+      "trade_date": "2025-12-08",
+      "equity": 10157734.64,
+      "cumulative_return": 0.517,
+      "margin_used": 240096.5,
+      "floating_pnl": 15700.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-52",
+      "strategy_id": "2",
+      "trade_date": "2025-12-09",
+      "equity": 10148063.2,
+      "cumulative_return": 0.4213,
+      "margin_used": 182710.5,
+      "floating_pnl": -1100.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-53",
+      "strategy_id": "2",
+      "trade_date": "2025-12-10",
+      "equity": 10152094.4,
+      "cumulative_return": 0.4612,
+      "margin_used": 265335.0,
+      "floating_pnl": 5500.0,
+      "strategies": {
+        "strategy_code": "rkhf01",
+        "strategy_name": "rkhf01"
+      }
+    },
+    {
+      "id": "eq-54",
+      "strategy_id": "1",
+      "trade_date": "2025-11-17",
+      "equity": 10079366.06,
+      "cumulative_return": 0.0,
+      "margin_used": 223165.3,
+      "floating_pnl": -11000.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-55",
+      "strategy_id": "1",
+      "trade_date": "2025-11-18",
+      "equity": 10084950.24,
+      "cumulative_return": 0.0554,
+      "margin_used": 231609.2,
+      "floating_pnl": -2490.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-56",
+      "strategy_id": "1",
+      "trade_date": "2025-11-19",
+      "equity": 10090359.28,
+      "cumulative_return": 0.1091,
+      "margin_used": 199827.6,
+      "floating_pnl": 1790.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-57",
+      "strategy_id": "1",
+      "trade_date": "2025-11-20",
+      "equity": 10092322.63,
+      "cumulative_return": 0.1285,
+      "margin_used": 196431.4,
+      "floating_pnl": 310.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-58",
+      "strategy_id": "1",
+      "trade_date": "2025-11-21",
+      "equity": 10089506.93,
+      "cumulative_return": 0.1006,
+      "margin_used": 205378.8,
+      "floating_pnl": -2490.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-59",
+      "strategy_id": "1",
+      "trade_date": "2025-11-24",
+      "equity": 10092439.38,
+      "cumulative_return": 0.1297,
+      "margin_used": 295939.2,
+      "floating_pnl": -1810.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-60",
+      "strategy_id": "1",
+      "trade_date": "2025-11-25",
+      "equity": 10096062.69,
+      "cumulative_return": 0.1657,
+      "margin_used": 314747.3,
+      "floating_pnl": 830.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-61",
+      "strategy_id": "1",
+      "trade_date": "2025-11-26",
+      "equity": 10101551.61,
+      "cumulative_return": 0.2201,
+      "margin_used": 338131.2,
+      "floating_pnl": 5000.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-62",
+      "strategy_id": "1",
+      "trade_date": "2025-11-27",
+      "equity": 10104020.49,
+      "cumulative_return": 0.2446,
+      "margin_used": 341862.5,
+      "floating_pnl": 3570.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-63",
+      "strategy_id": "1",
+      "trade_date": "2025-11-28",
+      "equity": 10109009.61,
+      "cumulative_return": 0.2941,
+      "margin_used": 378747.2,
+      "floating_pnl": 8580.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-64",
+      "strategy_id": "1",
+      "trade_date": "2025-12-01",
+      "equity": 10112381.81,
+      "cumulative_return": 0.3276,
+      "margin_used": 317311.3,
+      "floating_pnl": -300.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-65",
+      "strategy_id": "1",
+      "trade_date": "2025-12-02",
+      "equity": 10116009.93,
+      "cumulative_return": 0.3636,
+      "margin_used": 285137.4,
+      "floating_pnl": -1050.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-66",
+      "strategy_id": "1",
+      "trade_date": "2025-12-03",
+      "equity": 10121069.49,
+      "cumulative_return": 0.4138,
+      "margin_used": 267701.5,
+      "floating_pnl": 620.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-67",
+      "strategy_id": "1",
+      "trade_date": "2025-12-04",
+      "equity": 10124851.27,
+      "cumulative_return": 0.4513,
+      "margin_used": 170341.0,
+      "floating_pnl": 150.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-68",
+      "strategy_id": "1",
+      "trade_date": "2025-12-05",
+      "equity": 10124971.27,
+      "cumulative_return": 0.4525,
+      "margin_used": 170249.8,
+      "floating_pnl": 270.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-69",
+      "strategy_id": "1",
+      "trade_date": "2025-12-08",
+      "equity": 10124813.68,
+      "cumulative_return": 0.4509,
+      "margin_used": 182032.2,
+      "floating_pnl": -250.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-70",
+      "strategy_id": "1",
+      "trade_date": "2025-12-09",
+      "equity": 10123473.24,
+      "cumulative_return": 0.4376,
+      "margin_used": 197405.9,
+      "floating_pnl": -1580.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-71",
+      "strategy_id": "1",
+      "trade_date": "2025-12-10",
+      "equity": 10121557.84,
+      "cumulative_return": 0.4186,
+      "margin_used": 208352.0,
+      "floating_pnl": -2050.0,
+      "strategies": {
+        "strategy_code": "rqgg01",
+        "strategy_name": "rqgg01"
+      }
+    },
+    {
+      "id": "eq-72",
+      "strategy_id": "7",
+      "trade_date": "2025-11-17",
+      "equity": 10092165.53,
+      "cumulative_return": 0.0,
+      "margin_used": 203522.55,
+      "floating_pnl": -5060.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-73",
+      "strategy_id": "7",
+      "trade_date": "2025-11-18",
+      "equity": 10087939.64,
+      "cumulative_return": -0.0419,
+      "margin_used": 208600.35,
+      "floating_pnl": -3500.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-74",
+      "strategy_id": "7",
+      "trade_date": "2025-11-19",
+      "equity": 10083906.51,
+      "cumulative_return": -0.0818,
+      "margin_used": 184095.8,
+      "floating_pnl": -10180.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-75",
+      "strategy_id": "7",
+      "trade_date": "2025-11-20",
+      "equity": 10086465.89,
+      "cumulative_return": -0.0565,
+      "margin_used": 183745.45,
+      "floating_pnl": -7965.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-76",
+      "strategy_id": "7",
+      "trade_date": "2025-11-21",
+      "equity": 10088465.6,
+      "cumulative_return": -0.0367,
+      "margin_used": 171799.6,
+      "floating_pnl": -10335.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-77",
+      "strategy_id": "7",
+      "trade_date": "2025-11-24",
+      "equity": 10101346.27,
+      "cumulative_return": 0.091,
+      "margin_used": 196621.6,
+      "floating_pnl": 2870.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-78",
+      "strategy_id": "7",
+      "trade_date": "2025-11-25",
+      "equity": 10101709.48,
+      "cumulative_return": 0.0946,
+      "margin_used": 189661.15,
+      "floating_pnl": 2620.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-79",
+      "strategy_id": "7",
+      "trade_date": "2025-11-26",
+      "equity": 10090416.25,
+      "cumulative_return": -0.0173,
+      "margin_used": 252531.3,
+      "floating_pnl": -9945.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-80",
+      "strategy_id": "7",
+      "trade_date": "2025-11-27",
+      "equity": 10078474.44,
+      "cumulative_return": -0.1357,
+      "margin_used": 268441.95,
+      "floating_pnl": -21725.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-81",
+      "strategy_id": "7",
+      "trade_date": "2025-11-28",
+      "equity": 10077773.73,
+      "cumulative_return": -0.1426,
+      "margin_used": 180906.95,
+      "floating_pnl": -14195.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-82",
+      "strategy_id": "7",
+      "trade_date": "2025-12-01",
+      "equity": 10090038.53,
+      "cumulative_return": -0.0211,
+      "margin_used": 57719.9,
+      "floating_pnl": -5000.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-83",
+      "strategy_id": "7",
+      "trade_date": "2025-12-02",
+      "equity": 10094357.91,
+      "cumulative_return": 0.0217,
+      "margin_used": 50240.05,
+      "floating_pnl": 1395.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-84",
+      "strategy_id": "7",
+      "trade_date": "2025-12-03",
+      "equity": 10095160.1,
+      "cumulative_return": 0.0297,
+      "margin_used": 46474.75,
+      "floating_pnl": 1025.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-85",
+      "strategy_id": "7",
+      "trade_date": "2025-12-04",
+      "equity": 10091920.1,
+      "cumulative_return": -0.0024,
+      "margin_used": 46285.05,
+      "floating_pnl": -2215.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-86",
+      "strategy_id": "7",
+      "trade_date": "2025-12-05",
+      "equity": 10089521.01,
+      "cumulative_return": -0.0262,
+      "margin_used": 89378.1,
+      "floating_pnl": -6500.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-87",
+      "strategy_id": "7",
+      "trade_date": "2025-12-08",
+      "equity": 10078019.44,
+      "cumulative_return": -0.1402,
+      "margin_used": 99677.2,
+      "floating_pnl": -17995.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-88",
+      "strategy_id": "7",
+      "trade_date": "2025-12-09",
+      "equity": 10066013.48,
+      "cumulative_return": -0.2591,
+      "margin_used": 110824.0,
+      "floating_pnl": -21580.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-89",
+      "strategy_id": "7",
+      "trade_date": "2025-12-10",
+      "equity": 10051746.91,
+      "cumulative_return": -0.4005,
+      "margin_used": 120817.55,
+      "floating_pnl": -35840.0,
+      "strategies": {
+        "strategy_code": "rwyw01",
+        "strategy_name": "rwyw01"
+      }
+    },
+    {
+      "id": "eq-90",
+      "strategy_id": "4",
+      "trade_date": "2025-11-17",
+      "equity": 20121525.37,
+      "cumulative_return": 0.0,
+      "margin_used": 497586.2,
+      "floating_pnl": 55760.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-91",
+      "strategy_id": "4",
+      "trade_date": "2025-11-18",
+      "equity": 20132522.76,
+      "cumulative_return": 0.0547,
+      "margin_used": 489352.6,
+      "floating_pnl": 59140.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-92",
+      "strategy_id": "4",
+      "trade_date": "2025-11-19",
+      "equity": 20170503.19,
+      "cumulative_return": 0.2434,
+      "margin_used": 519982.8,
+      "floating_pnl": 97490.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-93",
+      "strategy_id": "4",
+      "trade_date": "2025-11-20",
+      "equity": 20142956.46,
+      "cumulative_return": 0.1065,
+      "margin_used": 423866.0,
+      "floating_pnl": 54620.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-94",
+      "strategy_id": "4",
+      "trade_date": "2025-11-21",
+      "equity": 20116657.19,
+      "cumulative_return": -0.0242,
+      "margin_used": 348148.5,
+      "floating_pnl": 37880.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-95",
+      "strategy_id": "4",
+      "trade_date": "2025-11-24",
+      "equity": 20095399.99,
+      "cumulative_return": -0.1298,
+      "margin_used": 361906.0,
+      "floating_pnl": 27030.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-96",
+      "strategy_id": "4",
+      "trade_date": "2025-11-25",
+      "equity": 20104151.26,
+      "cumulative_return": -0.0863,
+      "margin_used": 330812.0,
+      "floating_pnl": 44445.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-97",
+      "strategy_id": "4",
+      "trade_date": "2025-11-26",
+      "equity": 20108062.74,
+      "cumulative_return": -0.0669,
+      "margin_used": 238034.75,
+      "floating_pnl": 32400.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-98",
+      "strategy_id": "4",
+      "trade_date": "2025-11-27",
+      "equity": 20099824.03,
+      "cumulative_return": -0.1079,
+      "margin_used": 270718.5,
+      "floating_pnl": 11565.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-99",
+      "strategy_id": "4",
+      "trade_date": "2025-11-28",
+      "equity": 20107404.39,
+      "cumulative_return": -0.0702,
+      "margin_used": 395531.45,
+      "floating_pnl": 10690.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-100",
+      "strategy_id": "4",
+      "trade_date": "2025-12-01",
+      "equity": 20140434.81,
+      "cumulative_return": 0.094,
+      "margin_used": 728916.9,
+      "floating_pnl": 38425.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-101",
+      "strategy_id": "4",
+      "trade_date": "2025-12-02",
+      "equity": 20153986.35,
+      "cumulative_return": 0.1613,
+      "margin_used": 724354.3,
+      "floating_pnl": 48840.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-102",
+      "strategy_id": "4",
+      "trade_date": "2025-12-03",
+      "equity": 20150818.95,
+      "cumulative_return": 0.1456,
+      "margin_used": 741021.2,
+      "floating_pnl": 38400.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-103",
+      "strategy_id": "4",
+      "trade_date": "2025-12-04",
+      "equity": 20167084.42,
+      "cumulative_return": 0.2264,
+      "margin_used": 780748.0,
+      "floating_pnl": 55565.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-104",
+      "strategy_id": "4",
+      "trade_date": "2025-12-05",
+      "equity": 20193796.16,
+      "cumulative_return": 0.3592,
+      "margin_used": 608204.3,
+      "floating_pnl": 46495.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-105",
+      "strategy_id": "4",
+      "trade_date": "2025-12-08",
+      "equity": 20171381.79,
+      "cumulative_return": 0.2478,
+      "margin_used": 402347.5,
+      "floating_pnl": 6175.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-106",
+      "strategy_id": "4",
+      "trade_date": "2025-12-09",
+      "equity": 20138599.78,
+      "cumulative_return": 0.0849,
+      "margin_used": 482091.35,
+      "floating_pnl": -1465.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-107",
+      "strategy_id": "4",
+      "trade_date": "2025-12-10",
+      "equity": 20148604.63,
+      "cumulative_return": 0.1346,
+      "margin_used": 469531.8,
+      "floating_pnl": 11480.0,
+      "strategies": {
+        "strategy_code": "rxzx01",
+        "strategy_name": "rxzx01"
+      }
+    },
+    {
+      "id": "eq-108",
+      "strategy_id": "8",
+      "trade_date": "2025-11-17",
+      "equity": 10628010.01,
+      "cumulative_return": 0.0,
+      "margin_used": 631719.0,
+      "floating_pnl": 198140.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-109",
+      "strategy_id": "8",
+      "trade_date": "2025-11-18",
+      "equity": 10634519.93,
+      "cumulative_return": 0.0613,
+      "margin_used": 608184.9,
+      "floating_pnl": 202480.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-110",
+      "strategy_id": "8",
+      "trade_date": "2025-11-19",
+      "equity": 10614239.93,
+      "cumulative_return": -0.1296,
+      "margin_used": 611156.9,
+      "floating_pnl": 182200.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-111",
+      "strategy_id": "8",
+      "trade_date": "2025-11-20",
+      "equity": 10617613.43,
+      "cumulative_return": -0.0978,
+      "margin_used": 587390.2,
+      "floating_pnl": 181880.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-112",
+      "strategy_id": "8",
+      "trade_date": "2025-11-21",
+      "equity": 10639239.83,
+      "cumulative_return": 0.1057,
+      "margin_used": 594473.1,
+      "floating_pnl": 209375.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-113",
+      "strategy_id": "8",
+      "trade_date": "2025-11-24",
+      "equity": 10624596.53,
+      "cumulative_return": -0.0321,
+      "margin_used": 607764.1,
+      "floating_pnl": 194755.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-114",
+      "strategy_id": "8",
+      "trade_date": "2025-11-25",
+      "equity": 10608434.21,
+      "cumulative_return": -0.1842,
+      "margin_used": 661567.0,
+      "floating_pnl": 178725.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-115",
+      "strategy_id": "8",
+      "trade_date": "2025-11-26",
+      "equity": 10586371.13,
+      "cumulative_return": -0.3918,
+      "margin_used": 619050.9,
+      "floating_pnl": 222945.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-116",
+      "strategy_id": "8",
+      "trade_date": "2025-11-27",
+      "equity": 10587770.72,
+      "cumulative_return": -0.3786,
+      "margin_used": 595787.6,
+      "floating_pnl": 181945.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-117",
+      "strategy_id": "8",
+      "trade_date": "2025-11-28",
+      "equity": 10578630.72,
+      "cumulative_return": -0.4646,
+      "margin_used": 596978.6,
+      "floating_pnl": 172805.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-118",
+      "strategy_id": "8",
+      "trade_date": "2025-12-01",
+      "equity": 10576441.75,
+      "cumulative_return": -0.4852,
+      "margin_used": 585724.6,
+      "floating_pnl": 164965.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-119",
+      "strategy_id": "8",
+      "trade_date": "2025-12-02",
+      "equity": 10552961.75,
+      "cumulative_return": -0.7061,
+      "margin_used": 589276.7,
+      "floating_pnl": 141485.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-120",
+      "strategy_id": "8",
+      "trade_date": "2025-12-03",
+      "equity": 10552451.75,
+      "cumulative_return": -0.7109,
+      "margin_used": 588647.4,
+      "floating_pnl": 140975.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-121",
+      "strategy_id": "8",
+      "trade_date": "2025-12-04",
+      "equity": 10584349.19,
+      "cumulative_return": -0.4108,
+      "margin_used": 575166.2,
+      "floating_pnl": 169655.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-122",
+      "strategy_id": "8",
+      "trade_date": "2025-12-05",
+      "equity": 10576912.88,
+      "cumulative_return": -0.4808,
+      "margin_used": 575329.9,
+      "floating_pnl": 162235.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-123",
+      "strategy_id": "8",
+      "trade_date": "2025-12-08",
+      "equity": 10559332.54,
+      "cumulative_return": -0.6462,
+      "margin_used": 617097.8,
+      "floating_pnl": 136295.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-124",
+      "strategy_id": "8",
+      "trade_date": "2025-12-09",
+      "equity": 10568697.46,
+      "cumulative_return": -0.5581,
+      "margin_used": 575181.5,
+      "floating_pnl": 136085.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-125",
+      "strategy_id": "8",
+      "trade_date": "2025-12-10",
+      "equity": 10570722.32,
+      "cumulative_return": -0.539,
+      "margin_used": 571216.3,
+      "floating_pnl": 146135.0,
+      "strategies": {
+        "strategy_code": "yj2107",
+        "strategy_name": "yj2107"
+      }
+    },
+    {
+      "id": "eq-126",
+      "strategy_id": "6",
+      "trade_date": "2025-11-17",
+      "equity": 5012820.72,
+      "cumulative_return": 0.0,
+      "margin_used": 52281.6,
+      "floating_pnl": 6240.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-127",
+      "strategy_id": "6",
+      "trade_date": "2025-11-18",
+      "equity": 5010900.72,
+      "cumulative_return": -0.0383,
+      "margin_used": 52128.0,
+      "floating_pnl": 4320.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-128",
+      "strategy_id": "6",
+      "trade_date": "2025-11-19",
+      "equity": 5009460.72,
+      "cumulative_return": -0.067,
+      "margin_used": 52012.8,
+      "floating_pnl": 2880.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-129",
+      "strategy_id": "6",
+      "trade_date": "2025-11-20",
+      "equity": 5004900.72,
+      "cumulative_return": -0.158,
+      "margin_used": 51648.0,
+      "floating_pnl": -1680.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-130",
+      "strategy_id": "6",
+      "trade_date": "2025-11-21",
+      "equity": 5002020.72,
+      "cumulative_return": -0.2154,
+      "margin_used": 51417.6,
+      "floating_pnl": -4560.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-131",
+      "strategy_id": "6",
+      "trade_date": "2025-11-24",
+      "equity": 5014500.72,
+      "cumulative_return": 0.0335,
+      "margin_used": 52416.0,
+      "floating_pnl": 7920.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-132",
+      "strategy_id": "6",
+      "trade_date": "2025-11-25",
+      "equity": 5015220.72,
+      "cumulative_return": 0.0479,
+      "margin_used": 52473.6,
+      "floating_pnl": 8640.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-133",
+      "strategy_id": "6",
+      "trade_date": "2025-11-26",
+      "equity": 5013300.72,
+      "cumulative_return": 0.0096,
+      "margin_used": 52320.0,
+      "floating_pnl": 6720.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-134",
+      "strategy_id": "6",
+      "trade_date": "2025-11-27",
+      "equity": 5010420.72,
+      "cumulative_return": -0.0479,
+      "margin_used": 52089.6,
+      "floating_pnl": 3840.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-135",
+      "strategy_id": "6",
+      "trade_date": "2025-11-28",
+      "equity": 5006340.72,
+      "cumulative_return": -0.1293,
+      "margin_used": 51763.2,
+      "floating_pnl": -240.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-136",
+      "strategy_id": "6",
+      "trade_date": "2025-12-01",
+      "equity": 5010420.72,
+      "cumulative_return": -0.0479,
+      "margin_used": 52089.6,
+      "floating_pnl": 3840.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-137",
+      "strategy_id": "6",
+      "trade_date": "2025-12-02",
+      "equity": 5013780.72,
+      "cumulative_return": 0.0192,
+      "margin_used": 52358.4,
+      "floating_pnl": 7200.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-138",
+      "strategy_id": "6",
+      "trade_date": "2025-12-03",
+      "equity": 5011620.72,
+      "cumulative_return": -0.0239,
+      "margin_used": 52185.6,
+      "floating_pnl": 5040.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-139",
+      "strategy_id": "6",
+      "trade_date": "2025-12-04",
+      "equity": 5009460.72,
+      "cumulative_return": -0.067,
+      "margin_used": 52012.8,
+      "floating_pnl": 2880.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-140",
+      "strategy_id": "6",
+      "trade_date": "2025-12-05",
+      "equity": 5008500.72,
+      "cumulative_return": -0.0862,
+      "margin_used": 51936.0,
+      "floating_pnl": 1920.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-141",
+      "strategy_id": "6",
+      "trade_date": "2025-12-08",
+      "equity": 5011620.72,
+      "cumulative_return": -0.0239,
+      "margin_used": 52185.6,
+      "floating_pnl": 5040.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-142",
+      "strategy_id": "6",
+      "trade_date": "2025-12-09",
+      "equity": 5012340.72,
+      "cumulative_return": -0.0096,
+      "margin_used": 52243.2,
+      "floating_pnl": 5760.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    },
+    {
+      "id": "eq-143",
+      "strategy_id": "6",
+      "trade_date": "2025-12-10",
+      "equity": 5008020.72,
+      "cumulative_return": -0.0958,
+      "margin_used": 51897.6,
+      "floating_pnl": 1440.0,
+      "strategies": {
+        "strategy_code": "yj2135",
+        "strategy_name": "yj2135"
+      }
+    }
+  ],
+  "risk": [
+    {
+      "strategy_code": "mgq01",
+      "margin_ratio": 0.0085,
+      "net_exposure": 0.087143,
+      "gross_exposure": 0.118856,
+      "top1_concentration": 0.3177,
+      "position_count": 6,
+      "trade_count": 3,
+      "turnover": 126160.0
+    },
+    {
+      "strategy_code": "rdgy01",
+      "margin_ratio": 0.0185,
+      "net_exposure": 0.10303,
+      "gross_exposure": 0.424817,
+      "top1_concentration": 1.0,
+      "position_count": 1,
+      "trade_count": 0,
+      "turnover": 0
+    },
+    {
+      "strategy_code": "rkhf01",
+      "margin_ratio": 0.0261,
+      "net_exposure": 0.012717,
+      "gross_exposure": 0.68842,
+      "top1_concentration": 0.9275,
+      "position_count": 3,
+      "trade_count": 36,
+      "turnover": 4530910.0
+    },
+    {
+      "strategy_code": "rqgg01",
+      "margin_ratio": 0.0206,
+      "net_exposure": 0.012518,
+      "gross_exposure": 0.357919,
+      "top1_concentration": 0.5114,
+      "position_count": 3,
+      "trade_count": 15,
+      "turnover": 2865120.0
+    },
+    {
+      "strategy_code": "rwyw01",
+      "margin_ratio": 0.012,
+      "net_exposure": 0.171708,
+      "gross_exposure": 0.171708,
+      "top1_concentration": 0.7642,
+      "position_count": 2,
+      "trade_count": 2,
+      "turnover": 157025.0
+    },
+    {
+      "strategy_code": "rxzx01",
+      "margin_ratio": 0.0233,
+      "net_exposure": 0.174877,
+      "gross_exposure": 0.272115,
+      "top1_concentration": 0.2917,
+      "position_count": 8,
+      "trade_count": 25,
+      "turnover": 3620300.0
+    },
+    {
+      "strategy_code": "yj2107",
+      "margin_ratio": 0.054,
+      "net_exposure": -0.060128,
+      "gross_exposure": 0.580036,
+      "top1_concentration": 0.1738,
+      "position_count": 14,
+      "trade_count": 2,
+      "turnover": 648000.0
+    },
+    {
+      "strategy_code": "yj2135",
+      "margin_ratio": 0.0104,
+      "net_exposure": 0.129536,
+      "gross_exposure": 0.129536,
+      "top1_concentration": 1.0,
+      "position_count": 1,
+      "trade_count": 0,
+      "turnover": 0
+    }
+  ],
+  "meta": {
+    "latest_date": "2025-12-10",
+    "strategy_count": 8,
+    "total_equity_records": 144,
+    "total_position_records": 5109,
+    "total_trade_records": 1723
+  }
+}
