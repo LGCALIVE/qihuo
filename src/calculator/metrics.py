@@ -188,6 +188,8 @@ class MetricsCalculator:
         for pos in positions:
             if pos['trade_date'] != trade_date:
                 continue
+            if pos['strategy_code'] != strategy_code:
+                continue
 
             value = pos['position_value']
             contract_base = ''.join(filter(str.isalpha, pos['contract'].upper()))
@@ -219,7 +221,7 @@ class MetricsCalculator:
             position_count = 0
 
         # 成交统计
-        day_trades = [t for t in trades if t['trade_date'] == trade_date]
+        day_trades = [t for t in trades if t['trade_date'] == trade_date and t['strategy_code'] == strategy_code]
         trade_count = len(day_trades)
         turnover = sum(t['amount'] for t in day_trades)
 

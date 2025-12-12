@@ -1,340 +1,197 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import StrategyRankingTable from '@/components/StrategyRankingTable'
-import EquityChart from '@/components/EquityChart'
-import MetricCard from '@/components/MetricCard'
-import RiskMonitor from '@/components/RiskMonitor'
-import BehaviorAnalysis from '@/components/BehaviorAnalysis'
-import { supabase } from '@/lib/supabase'
-import type { StrategyScoreWithInfo, DailyEquityWithInfo } from '@/types/database'
+import Link from 'next/link'
+import Layout from '@/components/Layout'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Legend } from 'recharts'
 
-interface RiskMetric {
+interface StrategyScore {
   strategy_code: string
-  margin_ratio: number | null
-  net_exposure: number | null
-  gross_exposure: number | null
-  top1_concentration: number | null
-  position_count: number | null
-  trade_count?: number | null
-  turnover?: number | null
+  total_return: number
+  sharpe_ratio: number
+  max_drawdown: number
+  win_rate: number
+  total_score: number
+  rank: number
 }
 
-interface BehaviorSummary {
-  strategy_code: string
-  floating_loss_add_count: number
-  counter_trend_add_count: number
-  high_severity_count: number
-  behavior_risk_score: number
-  recent_alerts: Array<{
-    strategy_code: string
-    trade_date: string
-    alert_type: string
-    severity: string
-    contract: string
-    description: string
-    details: Record<string, unknown>
-  }>
+interface EquityData {
+  trade_date: string
+  cumulative_return: number
+  strategies: { strategy_code: string }
 }
 
-interface DataFile {
-  scores: StrategyScoreWithInfo[]
-  equity: DailyEquityWithInfo[]
-  risk: RiskMetric[]
-  behavior?: BehaviorSummary[]
-  meta: {
-    latest_date: string
-    strategy_count: number
-    total_equity_records: number
-    total_position_records: number
-    total_trade_records: number
-  }
-}
+const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#84cc16']
 
 export default function Dashboard() {
-  const [scores, setScores] = useState<StrategyScoreWithInfo[]>([])
-  const [equity, setEquity] = useState<DailyEquityWithInfo[]>([])
-  const [riskData, setRiskData] = useState<RiskMetric[]>([])
-  const [behaviorData, setBehaviorData] = useState<BehaviorSummary[]>([])
-  const [meta, setMeta] = useState<DataFile['meta'] | null>(null)
-  const [selectedStrategy, setSelectedStrategy] = useState<string>('')
+  const [scores, setScores] = useState<StrategyScore[]>([])
+  const [equity, setEquity] = useState<EquityData[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [dataSource, setDataSource] = useState<'supabase' | 'static'>('static')
+  const [latestDate, setLatestDate] = useState('')
 
   useEffect(() => {
-    async function fetchFromSupabase(): Promise<boolean> {
+    async function fetchData() {
       try {
-        // 尝试从 Supabase 获取数据
-        const { data: scoresData, error: scoresError } = await supabase
-          .from('strategy_scores')
-          .select(`*, strategies (strategy_code, strategy_name)`)
-          .order('rank')
-
-        if (scoresError || !scoresData || scoresData.length === 0) {
-          return false
-        }
-
-        setScores(scoresData as StrategyScoreWithInfo[])
-
-        // 获取权益数据
-        const { data: equityData } = await supabase
-          .from('daily_equity')
-          .select(`*, strategies (strategy_code, strategy_name)`)
-          .order('trade_date')
-
-        if (equityData && equityData.length > 0) {
-          // 计算累计收益率
-          const strategyGroups: Record<string, any[]> = {}
-          equityData.forEach((e: any) => {
-            const code = e.strategies?.strategy_code || e.strategy_id
-            if (!strategyGroups[code]) strategyGroups[code] = []
-            strategyGroups[code].push(e)
-          })
-
-          const enrichedEquity: any[] = []
-          Object.entries(strategyGroups).forEach(([code, items]) => {
-            items.sort((a, b) => a.trade_date.localeCompare(b.trade_date))
-            const firstEquity = items[0].equity
-            items.forEach(item => {
-              enrichedEquity.push({
-                ...item,
-                cumulative_return: ((item.equity / firstEquity) - 1) * 100
-              })
-            })
-          })
-          setEquity(enrichedEquity)
-        }
-
-        // 获取最新风险数据
-        const latestDate = equityData && equityData.length > 0
-          ? (equityData[equityData.length - 1] as any).trade_date
-          : null
-        if (latestDate) {
-          const { data: metricsData } = await supabase
-            .from('daily_metrics')
-            .select(`*, strategies (strategy_code)`)
-            .eq('trade_date', latestDate)
-
-          if (metricsData) {
-            setRiskData(metricsData.map((m: any) => ({
-              strategy_code: m.strategies?.strategy_code || '',
-              margin_ratio: m.margin_ratio,
-              net_exposure: m.net_exposure,
-              gross_exposure: m.gross_exposure,
-              top1_concentration: m.top1_concentration,
-              position_count: m.position_count,
-            })))
-          }
-
-          setMeta({
-            latest_date: latestDate,
-            strategy_count: scoresData.length,
-            total_equity_records: equityData?.length || 0,
-            total_position_records: 0,
-            total_trade_records: 0,
-          })
-        }
-
-        setDataSource('supabase')
-        return true
-      } catch (err) {
-        console.log('Supabase 连接失败，尝试静态数据')
-        return false
-      }
-    }
-
-    async function fetchFromStatic(): Promise<boolean> {
-      try {
-        const response = await fetch('/data.json')
-        if (!response.ok) return false
-        const data: DataFile = await response.json()
+        const res = await fetch('/data.json')
+        const data = await res.json()
         setScores(data.scores)
         setEquity(data.equity)
-        setRiskData(data.risk)
-        setBehaviorData(data.behavior || [])
-        setMeta(data.meta)
-        setDataSource('static')
-        return true
-      } catch {
-        return false
-      }
-    }
-
-    async function fetchData() {
-      // 优先尝试 Supabase
-      const supabaseOk = await fetchFromSupabase()
-      if (!supabaseOk) {
-        // 回退到静态数据
-        const staticOk = await fetchFromStatic()
-        if (!staticOk) {
-          setError('数据加载失败')
-        }
+        setLatestDate(data.meta.latest_date)
+      } catch (err) {
+        console.error('Failed to load data:', err)
       }
       setLoading(false)
     }
-
     fetchData()
   }, [])
 
-  // 计算汇总指标
-  const avgReturn = scores.length > 0
-    ? scores.reduce((sum, s) => sum + (s.total_return || 0), 0) / scores.length
-    : 0
-  const avgScore = scores.length > 0
-    ? scores.reduce((sum, s) => sum + (s.total_score || 0), 0) / scores.length
-    : 0
-  const highRiskCount = riskData.filter(r =>
-    (r.margin_ratio || 0) > 0.5 || (r.top1_concentration || 0) > 0.8
-  ).length
+  const chartData = (() => {
+    const grouped: Record<string, Record<string, number | string>> = {}
+    equity.forEach(e => {
+      const date = e.trade_date
+      const code = e.strategies?.strategy_code
+      if (!grouped[date]) grouped[date] = { date }
+      if (code) grouped[date][code] = e.cumulative_return
+    })
+    return Object.values(grouped).sort((a, b) => String(a.date).localeCompare(String(b.date)))
+  })()
 
-  // 高行为风险策略数量
-  const highBehaviorRiskCount = behaviorData.filter(b =>
-    b.behavior_risk_score >= 80
-  ).length
+  const strategyCodes = [...new Set(equity.map(e => e.strategies?.strategy_code).filter(Boolean))]
+  const avgReturn = scores.length ? scores.reduce((sum, s) => sum + s.total_return, 0) / scores.length : 0
+  const avgScore = scores.length ? scores.reduce((sum, s) => sum + s.total_score, 0) / scores.length : 0
+  const topStrategy = scores[0]
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className="flex items-center justify-center h-64">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        </div>
+      </Layout>
+    )
+  }
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* 顶部导航 */}
-      <nav className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <h1 className="text-xl font-bold text-gray-900">期货策略分析平台</h1>
+    <Layout>
+      <div className="space-y-6">
+        {/* 标题 */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-white">策略总览</h1>
+            <p className="text-gray-500 mt-1">数据更新至 {latestDate}</p>
+          </div>
+        </div>
+
+        {/* 核心指标卡片 */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <MetricCard title="策略数量" value={scores.length} subtitle={`${equity.length} 条记录`} />
+          <MetricCard
+            title="平均收益"
+            value={`${(avgReturn * 100).toFixed(2)}%`}
+            subtitle={avgReturn >= 0 ? '整体盈利' : '整体亏损'}
+            valueColor={avgReturn >= 0 ? 'text-green-400' : 'text-red-400'}
+          />
+          <MetricCard title="平均评分" value={avgScore.toFixed(1)} subtitle="综合表现" />
+          <MetricCard
+            title="最佳策略"
+            value={topStrategy?.strategy_code || '-'}
+            subtitle={`评分 ${topStrategy?.total_score.toFixed(1)}`}
+          />
+        </div>
+
+        {/* 图表区域 */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* 累计收益曲线 */}
+          <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-white">累计收益率曲线</h3>
+              <Link href="/strategies" className="text-sm text-blue-400 hover:text-blue-300">
+                查看全部 →
+              </Link>
             </div>
-            <div className="flex items-center space-x-4">
-              <span className={`px-2 py-1 text-xs rounded ${
-                dataSource === 'supabase'
-                  ? 'bg-green-100 text-green-800'
-                  : 'bg-blue-100 text-blue-800'
-              }`}>
-                {dataSource === 'supabase' ? 'Supabase' : '本地数据'}
-              </span>
-              {meta && (
-                <span className="text-sm text-gray-500">
-                  {meta.latest_date}
-                </span>
-              )}
+            <div className="h-72">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+                  <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#888' }} tickFormatter={(v) => v.slice(5)} />
+                  <YAxis tick={{ fontSize: 11, fill: '#888' }} tickFormatter={(v) => `${v.toFixed(1)}%`} />
+                  <ReferenceLine y={0} stroke="#555" strokeDasharray="3 3" />
+                  <Tooltip
+                    contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333', borderRadius: '8px' }}
+                    labelStyle={{ color: '#fff' }}
+                    formatter={(v: number) => [`${v.toFixed(3)}%`, '']}
+                  />
+                  <Legend />
+                  {strategyCodes.map((code, i) => (
+                    <Line
+                      key={code}
+                      type="monotone"
+                      dataKey={code}
+                      name={code}
+                      stroke={COLORS[i % COLORS.length]}
+                      strokeWidth={2}
+                      dot={false}
+                    />
+                  ))}
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* 策略排行榜 */}
+          <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-white">策略排行榜</h3>
+              <Link href="/strategies" className="text-sm text-blue-400 hover:text-blue-300">
+                查看详情 →
+              </Link>
+            </div>
+            <div className="space-y-2">
+              {scores.slice(0, 6).map((s, i) => (
+                <Link
+                  key={s.strategy_code}
+                  href={`/strategies/${s.strategy_code}`}
+                  className="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors group"
+                >
+                  <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold ${
+                    i < 3 ? 'bg-gradient-to-br from-yellow-500 to-orange-500 text-black' : 'bg-gray-800 text-gray-400'
+                  }`}>
+                    {i + 1}
+                  </span>
+                  <div className="ml-3 flex-1">
+                    <p className="font-medium text-white group-hover:text-blue-400">{s.strategy_code}</p>
+                    <p className="text-xs text-gray-500">
+                      夏普 {s.sharpe_ratio.toFixed(2)} · 胜率 {(s.win_rate * 100).toFixed(0)}%
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className={`font-bold ${s.total_return >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                      {(s.total_return * 100).toFixed(2)}%
+                    </p>
+                    <p className="text-xs text-gray-500">{s.total_score.toFixed(1)}分</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
-      </nav>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {loading ? (
-          <div className="flex items-center justify-center h-64">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-              <p className="mt-4 text-gray-500">加载数据中...</p>
-            </div>
-          </div>
-        ) : error ? (
-          <div className="flex items-center justify-center h-64">
-            <div className="text-center">
-              <p className="text-red-500">{error}</p>
-              <p className="mt-2 text-sm text-gray-500">
-                请运行: <code className="bg-gray-100 px-2 py-1 rounded">python src/export_data.py</code>
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="space-y-6">
-            {/* 概览卡片 */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <MetricCard
-                title="策略数量"
-                value={scores.length}
-                subtitle={meta ? `${meta.total_equity_records} 条权益记录` : ''}
-              />
-              <MetricCard
-                title="平均收益率"
-                value={`${(avgReturn * 100).toFixed(2)}%`}
-                trend={avgReturn >= 0 ? 'up' : 'down'}
-                trendValue={avgReturn >= 0 ? '盈利' : '亏损'}
-                color={avgReturn >= 0 ? 'success' : 'danger'}
-              />
-              <MetricCard
-                title="平均评分"
-                value={avgScore.toFixed(1)}
-                subtitle="综合表现"
-                color={avgScore >= 70 ? 'success' : avgScore >= 60 ? 'warning' : 'danger'}
-              />
-              <MetricCard
-                title="风险预警"
-                value={highRiskCount + highBehaviorRiskCount}
-                subtitle={`持仓${highRiskCount} 行为${highBehaviorRiskCount}`}
-                color={(highRiskCount + highBehaviorRiskCount) > 0 ? 'warning' : 'success'}
-              />
-            </div>
-
-            {/* 主内容区 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* 策略排行榜 */}
-              <StrategyRankingTable
-                data={scores}
-                onSelect={setSelectedStrategy}
-                selectedId={selectedStrategy}
-              />
-
-              {/* 权益曲线 */}
-              <EquityChart
-                data={equity}
-                selectedStrategies={selectedStrategy ? [
-                  scores.find(s => s.strategy_id === selectedStrategy)?.strategies?.strategy_code || ''
-                ] : undefined}
-              />
-            </div>
-
-            {/* 风险监控 */}
-            <RiskMonitor data={riskData} />
-
-            {/* 行为分析 */}
-            {behaviorData.length > 0 && (
-              <BehaviorAnalysis
-                data={behaviorData}
-                onSelectStrategy={(code) => {
-                  const strategy = scores.find(s => s.strategies?.strategy_code === code)
-                  if (strategy) setSelectedStrategy(strategy.strategy_id || '')
-                }}
-              />
-            )}
-
-            {/* 数据统计 */}
-            {meta && (
-              <div className="bg-white rounded-lg shadow p-4">
-                <h3 className="text-sm font-medium text-gray-500 mb-2">数据统计</h3>
-                <div className="grid grid-cols-4 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-500">策略数:</span>
-                    <span className="ml-2 font-medium">{meta.strategy_count}</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">权益记录:</span>
-                    <span className="ml-2 font-medium">{meta.total_equity_records}</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">持仓记录:</span>
-                    <span className="ml-2 font-medium">{meta.total_position_records}</span>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">成交记录:</span>
-                    <span className="ml-2 font-medium">{meta.total_trade_records}</span>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
       </div>
+    </Layout>
+  )
+}
 
-      {/* 底部 */}
-      <footer className="bg-white border-t border-gray-200 mt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-center text-sm text-gray-500">
-            期货策略分析平台 MVP v0.1 - 基于Excel结算单真实计算
-          </p>
-        </div>
-      </footer>
-    </main>
+function MetricCard({ title, value, subtitle, valueColor = 'text-white' }: {
+  title: string
+  value: string | number
+  subtitle: string
+  valueColor?: string
+}) {
+  return (
+    <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-5">
+      <p className="text-sm text-gray-500">{title}</p>
+      <p className={`text-2xl font-bold mt-1 ${valueColor}`}>{value}</p>
+      <p className="text-xs text-gray-600 mt-1">{subtitle}</p>
+    </div>
   )
 }

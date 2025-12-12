@@ -150,12 +150,30 @@ def main():
     # 按行为风险评分排序
     behavior_data.sort(key=lambda x: x['behavior_risk_score'], reverse=True)
 
+    # 5. 持仓明细数据（按日期和策略组织）
+    positions_data = []
+    for p in position_dicts:
+        positions_data.append({
+            'strategy_code': p['strategy_code'],
+            'trade_date': p['trade_date'],
+            'contract': p['contract'],
+            'direction': '多' if p['long_qty'] > 0 else '空',
+            'qty': p['long_qty'] if p['long_qty'] > 0 else p['short_qty'],
+            'avg_price': p['long_price'] if p['long_qty'] > 0 else p['short_price'],
+            'settlement': p['settlement'],
+            'floating_pnl': p['floating_pnl'],
+            'margin': p['margin'],
+            'exchange': p['exchange'],
+            'open_date': p['open_date']
+        })
+
     # 导出为 JSON
     output = {
         'scores': scores,
         'equity': equity_data,
         'risk': risk_data,
         'behavior': behavior_data,
+        'positions': positions_data,
         'meta': {
             'latest_date': latest_date,
             'strategy_count': len(scores),
@@ -177,6 +195,7 @@ def main():
     print(f"  - 权益数据: {len(equity_data)} 条")
     print(f"  - 风险数据: {len(risk_data)} 条")
     print(f"  - 行为分析: {len(behavior_data)} 条")
+    print(f"  - 持仓明细: {len(positions_data)} 条")
 
     # 打印策略排名
     print("\n=== 策略排名（真实数据）===")

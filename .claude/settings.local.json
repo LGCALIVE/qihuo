@@ -16,7 +16,15 @@
       "Bash(vercel ls:*)",
       "Bash(vercel inspect:*)",
       "Bash(python:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npx tsc:*)",
+      "Bash(pkill:*)",
+      "Bash(echo '=== Excel原始文件 ===' ls /Users/jayliu/qihuo_xianyu/mgq01_*/核算信息_*.xlsx)",
+      "Bash(echo -e \"\\n=== 解析后的真实数据 ===\" python3 -c \"\nimport pandas as pd\n# 读取一个Excel文件验证\ndf = pd.read_excel(''''/Users/jayliu/qihuo_xianyu/mgq01_2025-11-17_2025-12-10_逐笔对冲/核算信息_mgq01_2025-12-10_逐笔对冲.xlsx'''', sheet_name=''''客户交易核算日报'''', header=None)\nprint(''''mgq01 2025-12-10 客户权益:'''', df.iloc[14][8])\n\")",
+      "Bash(ls:*)",
+      "Bash(SUPABASE_URL='https://fivxtmdtncqmxsfuzwam.supabase.co' SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpdnh0bWR0bmNxbXhzZnV6d2FtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU1MjMzODgsImV4cCI6MjA4MTA5OTM4OH0.QamZ6vqQSZyb4U5LIrA5Z5xprm62DWtjTeba9ZIgt9E' python3:*)"
     ]
   }
 }
