@@ -87,7 +87,9 @@ export default function Dashboard() {
         }
 
         // 获取最新风险数据
-        const latestDate = equityData?.[equityData.length - 1]?.trade_date
+        const latestDate = equityData && equityData.length > 0
+          ? (equityData[equityData.length - 1] as any).trade_date
+          : null
         if (latestDate) {
           const { data: metricsData } = await supabase
             .from('daily_metrics')

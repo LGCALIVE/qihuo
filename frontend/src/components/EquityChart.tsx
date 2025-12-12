@@ -31,7 +31,7 @@ export default function EquityChart({ data, selectedStrategies }: Props) {
     if (!acc[date]) {
       acc[date] = { date }
     }
-    const strategyCode = item.strategies?.strategy_code || item.strategy_id
+    const strategyCode = item.strategies?.strategy_code || item.strategy_id || 'unknown'
     // 使用累计收益率，如果没有则用0
     acc[date][strategyCode] = item.cumulative_return ?? 0
     return acc
